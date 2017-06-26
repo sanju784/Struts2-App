@@ -5,10 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Login here</title>
 </head>
 <body>
-<p>Welcome to Struts</p>
- <s:property value="language" />
+  <s:form action="hello" method="post">
+    <s:textfield name="name" label="Name" size="20" />
+    <s:password name="password" label="Password" />
+    <s:submit name="submit" label="Submit" align="center" />
+  </s:form>
 </body>
 </html>

@@ -6,10 +6,29 @@
    
    <struts>
      <package name="default" extends="struts-default">
-       <action name="hello" class="com.sanju.struts.HelloWorldAction">
+       
+       <action name="hello" class="com.sanju.struts.WelcomeAction">
        	<result name="success">/success.jsp</result>
        	<result name="fail">/error.jsp</result>
        </action>
+     </package>
+     
+    <package name="login" namespace="/" extends="struts-default">
+    
+      <action name="index">
+         <result>/index.jsp</result>
+      </action>
        
+       <action name="login" class="com.sanju.struts.LoginAction">
+         <result name="input">/login.jsp</result>
+       	 <result name="success">/success.jsp</result>
+       	 <result name="fail">/login.jsp</result>
+       </action>
+       
+       <action name="register" class="com.sanju.struts.RegisterAction">
+       <result name="input">/register.jsp</result>
+       	<result name="success">/success.jsp</result>
+       	<result name="fail">/register.jsp</result>
+       </action>
      </package>
    </struts>
